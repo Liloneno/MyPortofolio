@@ -1,0 +1,362 @@
+/*
+* Title: My Portofolio
+* License: free
+
+* Designed with HTML and CSS by liloneno
+*/
+/* GENERAL CODE */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px grey;
+  background-color: #fff;
+  z-index: 999;
+}
+.toggle {
+  display: none;
+  /* padding: 5px 15px; */
+  font-size: 26px;
+  cursor: pointer;
+}
+.brand {
+  /* background-image: linear-gradient(#0f6eeb 30%, #4678e4 80%); */
+  padding: 5px 15px;
+  border-radius: 5px;
+  /* color: #fff; */
+  border: 1px solid #deebf7;
+  font-size: 26px;
+  transition: 0.2s ease-in-out;
+}
+.brand:hover {
+  background-color: #deebf7;
+  cursor: pointer;
+}
+header .navbar-menu {
+  margin-top: 8px;
+  font-size: 18px;
+}
+.navbar-menu a {
+  /* margin: 0 5px; */
+  padding: 5px 10px;
+  position: relative;
+}
+.navbar-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  background-color: #0358f5;
+  transition: 0.2s ease-in;
+}
+.navbar-menu a:hover {
+  color: #0358f5;
+}
+.navbar-menu a:hover::after {
+  opacity: 1;
+  bottom: -10px;
+}
+/* Media Query Header */
+@media screen and (max-width: 768px) {
+  .navbar-menu a {
+    display: none;
+  }
+  .brand {
+    font-size: 20px;
+  }
+  .toggle {
+    display: block;
+  }
+}
+/* HEADER ENDS */
+/* ##################### */
+.hero {
+  background-image: url("../img/hero-img.png");
+  background-repeat: no-repeat;
+  background-position: 700px 90px;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.hero-text h1 {
+  font-size: 40px;
+}
+.hero-text p {
+  font-size: 30px;
+  margin: 10px auto 0;
+  padding: 15px 0;
+  width: 60%;
+  background-color: #0589f5;
+  border-radius: 10px;
+}
+/* HERO ENDS */
+/* #################### */
+.about,
+.skill,
+.service,
+.contact {
+  padding: 100px 0 20px;
+  /* background-color: #a1e8fd; */
+}
+.about-text,
+.skill-text,
+.service-text,
+.contact .ct,
+footer {
+  text-align: center;
+}
+.about-text h1,
+.skill h1,
+.service-text h1,
+.contact .ct,
+footer h1 {
+  font-size: 40px;
+}
+.about-text p,
+.skill-text p,
+.service-text p {
+  padding-top: 18px;
+  font-size: 20px;
+}
+/* ABOUT DETAIL */
+.about-detail {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.about-detail-img {
+  background-color: #b9c7f3;
+}
+.about-detail-text {
+  width: 700px;
+  padding: 20px 10px;
+  /* border: 1px solid #b9c7f3; */
+  background-color: #f0f7fd;
+}
+.about-detail-text p {
+  /* margin-top: 30px; */
+  font-size: 18px;
+  line-height: 30px;
+  /* text-align: center; */
+  padding: 20px;
+}
+.table {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  line-height: 30px;
+  font-size: 18px;
+}
+.table i {
+  color: #0358f5;
+}
+
+/* ##################### */
+/* SKILL */
+
+.skill-text {
+  margin-bottom: 15px;
+}
+.skill-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.skill-box-1 {
+  width: 450px;
+  padding: 8px;
+}
+.skill-box-1 p {
+  margin-bottom: 5px;
+}
+.skill-container {
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.skills {
+  border-radius: 5px;
+}
+
+.html,
+.css,
+.bs,
+.js,
+.php,
+.wp {
+  background-color: #0358f5;
+  height: 10px;
+}
+.html {
+  width: 90%;
+}
+.css {
+  width: 85%;
+}
+.bs {
+  width: 30%;
+}
+.js {
+  width: 25%;
+}
+.php {
+  width: 20%;
+}
+.wp {
+  width: 50%;
+}
+/* ######################### */
+/* SERVICE */
+.service {
+  width: 100%;
+}
+.service-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.sbox {
+  box-shadow: 0 0 1px grey;
+  width: 350px;
+  height: 260px;
+  text-align: center;
+  margin: 25px 0 20px;
+  padding: 5px;
+  font-size: 18px;
+  transition: 0.2s ease-in;
+}
+.sbox:hover {
+  background-color: #f2f3f7;
+}
+.sbox .b {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.sbox p {
+  line-height: 27px;
+}
+.sbox img {
+  height: 75px;
+}
+.sbox:hover {
+  box-shadow: 0 0 2px grey;
+}
+/* ##################### */
+/* CONTACT */
+.contact {
+  width: 100%;
+}
+.contact .ct {
+  margin-bottom: 40px;
+}
+.contact-detail {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ctext {
+  width: 400px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  /* background-color: #7ba6f5; */
+}
+.ctext-1 {
+  margin-bottom: 50px;
+}
+.ctext-1 h1 {
+  padding-bottom: 5px;
+}
+.ctext-1 p {
+  color: #3b3a3a;
+}
+
+.cform {
+  width: 500px;
+  /* background-color: #0358f5; */
+}
+.cform textarea {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.cform input {
+  display: block;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 90%;
+  font-size: 15px;
+}
+.cform button {
+  margin-left: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  color: #0358f5;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  overflow: hidden;
+}
+.cform button:hover {
+  color: #fff;
+  background-color: #0358f5;
+}
+/* ################### */
+footer {
+  margin-top: 20px;
+  padding-top: 100px;
+  background-color: #f8f4f4;
+}
+footer h1 {
+  color: #0358f5;
+}
+.footer-icon i {
+  font-size: 20px;
+  margin: 20px 8px 50px;
+}
+.footer-icon .f:hover {
+  color: #0358f5;
+}
+.footer-icon .y:hover {
+  color: red;
+}
+.footer-icon .w:hover {
+  color: #04f771;
+}
+footer span {
+  color: #0358f5;
+}
+footer .copyright {
+  background-color: #d8d3d3;
+  padding: 10px 0;
+  color: #4e4d4d;
+}
